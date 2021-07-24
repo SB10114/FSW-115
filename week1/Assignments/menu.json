@@ -1,51 +1,57 @@
 {
     "menu": [
         {
-         "appetizers": {
-             "item": "fried shrooms",
-             "ingredients": ["baby portabellas", "lightly seasoned batter", "canola oil"],
-             "item description": "lightly fried baby bellas with a side of ranch for dipping.",
-             
-             "secondItem": "chicken wings",
-             "ingredients2": ["freshly butchered chicken wings", "bbq sauce", "buffalo sauce"],
-             "item2 description": "twice baked chicken wings smothered in your choice of sauce with plenty of napkins!"
-         }, 
-         "cold sandwiches": {
-            "firstItem": "bangin' BLT",
-            "firstItem ingredients": ["freshly cooked bacon", "thick slices of tomato", "light mayo", "crisp lettuce", "thick sliced and toasted texas toast buns"],
-            "firstItem decription": "A classic sammy with a modern twist, a BLT on texas toast",
-            
-            "secondItem": "turkey on wheat",
-            "secondItem ingredients": ["thinly sliced turkey breast", "your choice of cheeses(pepper jack, cheddar, provalone)", "mustard", "mayo", "white or wheat bread", "optional pickles"],
-            "secondItem description": "For those with simple tastes, a classic tuurkey with your choice of condiments and bread."
-         },
-             "hot sandwiches": {
-                "hotItem": "french dip",
-                "hotItem ingredients": ["thinly sliced roast beef", "provalone cheese", "hoagie roll", "creamy horseradish dip"],
-                "hotItem decription": "a hot and cheesy roast beef sammy on a hoagie, served with warm horseradish sauce for dipping",
-
-                "hotItem two": "philly cheese steak",
-                "hotItem two ingredients": ["thinly sliced and perfectly seasoned grilled steak", "sliced and sauteed bell pepper, garlic, and onion", "your choice of american or pepper jack cheese", "hoagie bun"],
-                "hotItem two description": "flavorful ingredients topped with gooey menlted cheese piled high atop a hoagie bun"
-            }, 
-            "desserts": {
-                "sweetTreats": "cheesecake",
-                "sweetTreats ingredients": ["graham cracker crut", "cream cheese", "sugar", "eggs", "vanilla bean paste", "sour cream", "lemon and orange zest", "optional vanilla berry topping"],
-                "sweetTreats description": "A thick slice of creamy fresh baked cheese cake with optional vanilla berry topping",
-
-                "sweetTreatsTwo": "chocolate fudge brownie",
-                "sweetTreatsTwo ingredients": ["semi-sweet chocolate morsels", "butter", "sugar", "eggs", "vanilla extract", "flour", "cocoa powder", "pinch of salt"],
-                "sweetTreatsTwo description": "warm and gooey chocolate fudge brownie with an optional scoop of vanilla ice cream on top"
-            }, 
-            "drinks": {
-                "drink": "sweet tea",
-                "drink ingredients": ["black tea", "granulated sugar", "water"],
-                "drink description": "a refreshing cool glass of southern style sweet tea served in a tall glass; lemon slice or sprig of fresh mint optional",
-                
-                "drinkTwo": "classic margarita",
-                "drinkTwo ingredients": ["tequila", "triple sec", "freshly squeezed lime juice", "ice", "coarse sea salt and lime for decoration"],
-                "drinkTwo description": "a classic cold margarita blended to perfection and served in a beautifully garnished glass for your enjoyment"
-            }     
+         "appetizers": [
+            {
+                "item": "fried shrooms",
+                "ingredients": ["baby portabellas", "lightly seasoned batter", "canola oil"],
+                "description": "lightly fried baby bellas with a side of ranch for dipping."
+            },{
+                "item": "chicken wings",
+                "ingredients": ["freshly butchered chicken wings", "bbq sauce", "buffalo sauce"],
+                "description": "twice baked chicken wings smothered in your choice of sauce with plenty of napkins!"
+            }
+            ], 
+        "cold sandwiches":[
+            {
+                "item": "bangin' BLT",
+                "ingredients": ["freshly cooked bacon", "thick slices of tomato", "light mayo", "crisp lettuce", "thick sliced and toasted texas toast buns"],
+                "description": "A classic sammy with a modern twist, a BLT on texas toast"
+            },{
+                "item": "turkey on wheat",
+                "ingredients": ["thinly sliced turkey breast", "your choice of cheeses(pepper jack, cheddar, provalone)", "mustard", "mayo", "white or wheat bread", "optional pickles"],
+                "description": "For those with simple tastes, a classic tuurkey with your choice of condiments and bread."
+            }],
+        "hot sandwiches": [
+            {
+                "item": "french dip",
+                "ingredients": ["thinly sliced roast beef", "provalone cheese", "hoagie roll", "creamy horseradish dip"],
+                "description": "a hot and cheesy roast beef sammy on a hoagie, served with warm horseradish sauce for dipping"
+            },{
+                "item": "philly cheese steak",
+                "ingredients": ["thinly sliced and perfectly seasoned grilled steak", "sliced and sauteed bell pepper, garlic, and onion", "your choice of american or pepper jack cheese", "hoagie bun"],
+                "description": "flavorful ingredients topped with gooey menlted cheese piled high atop a hoagie bun"
+            }], 
+        "desserts": [
+            {
+                "item": "cheesecake",
+                "ingredients": ["graham cracker crut", "cream cheese", "sugar", "eggs", "vanilla bean paste", "sour cream", "lemon and orange zest", "optional vanilla berry topping"],
+                "description": "A thick slice of creamy fresh baked cheese cake with optional vanilla berry topping"
+            },{
+                "item": "chocolate fudge brownie",
+                "ingredients": ["semi-sweet chocolate morsels", "butter", "sugar", "eggs", "vanilla extract", "flour", "cocoa powder", "pinch of salt"],
+                "description": "warm and gooey chocolate fudge brownie with an optional scoop of vanilla ice cream on top"
+            }], 
+        "drinks": [
+            {
+                "item": "sweet tea",
+                "ingredients": ["black tea", "granulated sugar", "water"],
+                "description": "a refreshing cool glass of southern style sweet tea served in a tall glass; lemon slice or sprig of fresh mint optional"
+            },{    
+                "item": "classic margarita",
+                "ingredients": ["tequila", "triple sec", "freshly squeezed lime juice", "ice", "coarse sea salt and lime for decoration"],
+                "description": "a classic cold margarita blended to perfection and served in a beautifully garnished glass for your enjoyment"
+            }]     
         }
     ]
 }
