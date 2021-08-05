@@ -1,0 +1,55 @@
+.topnav {
+    background-color: rgba(59, 58, 58, 0.712);
+    overflow: hidden;
+  }
+  
+.topnav a {
+    float: left;
+    color: #eceaea;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: underline;
+    font-size: 17px;
+  }
+  
+.topnav a:hover {
+    background-color: rgba(94, 94, 94, 0.692);
+    color: rgb(228, 231, 40);
+  }
+  
+
+#poke{
+    font-style: italic;
+    font-size: 300%;
+    text-decoration: underline;
+    text-decoration-color: rgb(228, 231, 40);
+    color:rgb(241, 11, 11);
+}
+
+#people {
+    font-style: italic;
+    font-size: 300%;
+    text-decoration: underline;
+    text-decoration-color: rgb(5, 5, 5);
+    color: rgb(24, 197, 209);
+}
+
+li {
+    font-size: 200%;
+    
+}
+
+@media screen and (max-width: 480px) {
+   .topnav {
+       width: 370px;
+   }
+
+   #poke{
+       font-size: 250%;
+   }
+
+   #people {
+       font-size: 250%;
+   }
+  }
+  
