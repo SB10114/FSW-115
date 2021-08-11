@@ -1,0 +1,61 @@
+.strikeThrough {
+    text-decoration: line-through;
+}
+body {
+    background-color: rgba(95, 158, 160, 0.534);
+}
+h1 {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: rgba(63, 63, 134, 0.329);
+    border-radius: 15px;
+    width: 150px;
+    height: 40px;
+    text-decoration: underline;
+}
+#myList {
+    padding-top: 20px;
+    padding-right: 25px;
+    display: table;
+    margin-right: 300px;
+    margin-left: 360px;
+    border-left: black double 5px;
+    border-right: black double 5px;
+    border-top: black double 4px;
+    border-bottom: black double 4px;
+    background-color: rgba(76, 101, 241, 0.233);
+}
+li {
+    font-weight: bolder;
+    padding-bottom: 40px;
+    color:rgba(23, 23, 24, 0.904)
+}
+p {
+    font-weight: normal;
+    padding-left: 25px;
+}
+input {
+    margin-left: 25px;
+}
+
+button {
+    display: table;
+    margin-left: 40px;
+    margin-top: -23px;
+    background-color: rgba(0, 255, 255, 0.212);
+}
+#container {
+    background-color: rgba(44, 56, 107, 0.74);
+    width: 220px;
+    height: 150px;
+    border-radius: 25px;
+    margin-top: 65px;
+    margin-left: 50px;
+}
+#formHeader {
+    color: cornsilk;
+    margin-left: 45px;
+    padding-top: 10px;
+    padding-bottom: -50px;
+}
