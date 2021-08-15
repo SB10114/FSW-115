@@ -1,0 +1,67 @@
+body {
+    background-image: url("https://api.time.com/wp-content/uploads/2015/12/star-wars-episode-iii-revenge-of-the-sith-obi-wan.jpg");
+    background-size: 1710px 1180px;
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    color: rgba(219, 219, 226, 0.897);
+}
+h1 {
+    margin-left: 280px;
+    margin-top: 150px;
+    text-decoration: underline;
+    
+}
+p, li {
+    margin-left: 350px;
+    font-size: 150%;
+}
+
+
+@media screen and (max-width: 480px) {
+    body {
+        /* background-image: url("https://api.time.com/wp-content/uploads/2015/12/star-wars-episode-iii-revenge-of-the-sith-obi-wan.jpg");  */
+        background-size: 480px 810px;
+        background-color: rgba(51, 51, 54, 0.897);
+    }
+    h1{
+        margin-left: 30px;
+        margin-top: 110px;
+    }
+    p, li{
+        margin-left: 100px;
+        font-size: 130%;
+    }
+   
+}
+@media screen and (max-width: 1024px) {
+    body {
+        /* background-image: url("https://api.time.com/wp-content/uploads/2015/12/star-wars-episode-iii-revenge-of-the-sith-obi-wan.jpg");  */
+        background-size: 1080px 1460px;
+        background-color: rgba(51, 51, 54, 0.897);
+    }
+    h1{
+        margin-left: 280px;
+        margin-top: 200px;
+    }
+    p, li{
+        margin-left: 330px;
+        font-size: 130%;
+    }
+   
+}
+@media screen and (max-width: 2476px) {
+    body {
+        /* background-image: url("https://api.time.com/wp-content/uploads/2015/12/star-wars-episode-iii-revenge-of-the-sith-obi-wan.jpg");  */
+        background-size: 2080px 1800px;
+        background-color: rgba(51, 51, 54, 0.897);
+    }
+    h1{
+        margin-left: 480px;
+        margin-top: 200px;
+    }
+    p, li{
+        margin-left: 530px;
+        font-size: 170%;
+    }
+  
+}
