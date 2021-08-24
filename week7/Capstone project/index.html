@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <title>Capstone Project</title>
+</head>
+<body>
+    <h1 id = header>FSW-115 Capstone Project</h1>
+
+
+<div id = "container">
+    <form name="myForm">
+        <h4 id ="formHeader">Add Books Here: </h4>
+        <input type="text" name="title" placeholder = "Set title" value = "">
+        <input type="number" name="price" placeholder = "Set Price" value = "">
+        <input type="text" name="description" placeholder = "Insert description" value = "">
+        <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="flex-container">
+        <div></div>
+        <div style="align-self: center"> 
+            <h1>API List</h1>
+        </div>
+        <div style="align-self: center">
+            <ul id = "myList"></ul>
+        </div>
+    </div>
+
+
+        <script src= "https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+        <script src= "app.js"></script>
+
+</body>
+</html>
