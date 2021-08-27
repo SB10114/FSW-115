@@ -1,9 +1,3 @@
-// const myHeader = document.getElementById('myh1')
-// document.body.appendChild(myHeader)
-
-// const myList = document.getElementById('myList')
-// document.body.appendChild(myList)
-
 const makeListItem = (obj) => {
     const listItems = document.createElement('li')
     myList.appendChild(listItems)
@@ -34,6 +28,7 @@ const makeListItem = (obj) => {
                 listItems.classList.remove('strikeThrough')
         }
     })
+        .catch(err => console.error(err))
 })
     
     var id = obj._id
@@ -45,7 +40,8 @@ const makeListItem = (obj) => {
         console.log(id)
         axios.delete('http://api.bryanuniversity.edu/SierraButler/list/' + id)
         .then(res => listItems.remove())
-        })
+        .catch(err => console.error(err))
+    })
 }
 
 axios.get('http://api.bryanuniversity.edu/SierraButler/list')
@@ -56,35 +52,32 @@ for(i = 0; i < res.data.length; i++){
     }
 })
 
-    const form = document.myForm
+    const integrateApi = async (e) => {
+        e.preventDefault()
 
-    form.addEventListener("submit", e => {
-         e.preventDefault()
-        
+        const starWars = await addSwapi()
+        let description = ''
+
+        if(!form.description.value) description = starWars
+        if(form.description.value) description = form.description.value
+
         const newItem = {
             name: form.title.value,
-            description: form.description.value,
+            description: description,
             price: form.price.value
         }
-
         axios.post('http://api.bryanuniversity.edu/SierraButler/list', newItem)
         .then(res => makeListItem(res.data))
         .catch(res => console.log(res))
-})
+    }
 
+    const form = document.myForm
+    form.addEventListener("submit", integrateApi)
 
-axios.get('https://swapi.dev/api/people/')
-.then(res => {
-    console.log(res)
-for(i = 0; i < res.data.results.length; i++){
-    var description = `Hair color:${res.data.results[i].hair_color}, Eye color: ${res.data.results[i].eye_color}, Skin color: ${res.data.results[i].skin_color}`
-    var obj = {
-        name: res.data.results[i].name,
-        price: res.data.results[i].height * res.data.results[i].mass,
-        description: description,
-        isComplete: false,
-        _id: i
-        }
-        makeListItem(obj)
-    } 
-})
+const addSwapi = () => {
+    return axios.get('https://swapi.dev/api/people/2')
+    .then(res => {
+        var description = `Hair color:${res.data.hair_color}, Eye color: ${res.data.eye_color}, Skin color: ${res.data.skin_color}`
+        return description
+    })
+}
