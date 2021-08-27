@@ -52,32 +52,64 @@ for(i = 0; i < res.data.length; i++){
     }
 })
 
-    const integrateApi = async (e) => {
-        e.preventDefault()
+const integrateApi = async (e) => {
+    e.preventDefault()
 
-        const starWars = await addSwapi()
-        let description = ''
+    const starWars = await addSwapi()
 
-        if(!form.description.value) description = starWars
-        if(form.description.value) description = form.description.value
+    let description = form.description.value
+    let price = form.price.value
 
-        const newItem = {
-            name: form.title.value,
-            description: description,
-            price: form.price.value
-        }
-        axios.post('http://api.bryanuniversity.edu/SierraButler/list', newItem)
-        .then(res => makeListItem(res.data))
-        .catch(res => console.log(res))
+    if(!form.description.value) description = starWars.description
+    if(!form.price.value) price = starWars.price
+
+    const newItem = {
+        name: form.title.value,
+        description: description,
+        price: price
     }
 
-    const form = document.myForm
-    form.addEventListener("submit", integrateApi)
-
-const addSwapi = () => {
-    return axios.get('https://swapi.dev/api/people/2')
-    .then(res => {
-        var description = `Hair color:${res.data.hair_color}, Eye color: ${res.data.eye_color}, Skin color: ${res.data.skin_color}`
-        return description
-    })
+    axios.post('http://api.bryanuniversity.edu/SierraButler/list', newItem)
+    .then(res => makeListItem(res.data))
+    .catch(res => console.log(res))
 }
+
+const form = document.myForm
+form.addEventListener("submit", integrateApi)
+
+
+
+const addSwapi = async () => {
+
+    let randomInt = Math.ceil( Math.random() * 10 )
+    let description = ''
+
+    await axios.get('https://swapi.dev/api/people/' + randomInt)
+    .then(res => {
+        description = `Hair color:${res.data.hair_color}, Eye color: ${res.data.eye_color}, Skin color: ${res.data.skin_color}`
+    })
+    .catch(err => console.log(err))
+
+    let parts = await axios.get('https://api.themoviedb.org/3/collection/10?api_key=922d98ed31642ec4a01ff7e8abcc4833')
+    .then(res => res.data.parts)
+    .catch(err => console.log(err))
+
+    let randomNum = Math.floor( Math.random() * (8 - 0 ) + 0 )
+    let selectedPart = parts[randomNum]
+    let price = Math.floor( selectedPart.popularity )
+
+    console.log(description)
+    console.log(price)
+
+    return { description: description, price: price }
+}
+
+
+
+
+
+
+
+
+
+
